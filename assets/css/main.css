@@ -32,7 +32,7 @@ p {
 }
 
 .centered {
-    text-align: center;
+    text-align: -webkit-left;
 }
 
 /* Links */
