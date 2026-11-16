@@ -1,468 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
-
-    <title>Akhil Thomas</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
-    <script src="assets/js/Chart.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body data-spy="scroll" data-offset="0" data-target="#nav">
-
-    <div id="section-topbar">
-        <div id="topbar-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="dropdown">
-                        <ul id="nav" class="nav">
-                            <li class="menu-item"><a class="smoothScroll" href="#about" title="About"><i class="icon-user"></i></a></li>
-                            <li class="menu-item"><a class="smoothScroll" href="https://drive.google.com/file/d/1xMF7pXSdQKw5GOYkahHDuO81p75HuhfM/view" title="Resume"><i class="icon-file"></i></a></li>
-                            <li class="menu-item"><a class="smoothScroll" href="#work" title="Works"><i class="icon-briefcase"></i></a></li>
-                            <li class="menu-item"><a class="smoothScroll" href="#contact" title="Contact"><i class="icon-envelope"></i></a></li>
-                        </ul>
-                        <!--/ uL#nav -->
-                    </div>
-                    <!-- /.dropdown -->
-
-                    <div class="clear"></div>
-                </div>
-                <!--/.row -->
-            </div>
-            <!--/.container -->
-
-            <div class="clear"></div>
-        </div>
-        <!--/ #topbar-inner -->
+---
+layout: default
+body_class: home
+---
+<section class="hero">
+  <img class="hero-img" src="{{ '/assets/img/hero.jpg' | relative_url }}" alt="" fetchpriority="high">
+  <div class="hero-shade"></div>
+  <div class="wrap hero-content">
+    <p class="eyebrow">{{ site.author.role }} · {{ site.author.location }}</p>
+    <h1 class="hero-title">{{ site.author.name }}</h1>
+    <p class="hero-sub">I build things in the <em>cloud</em> — and chase light with a <em>camera</em>.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#experience">View my work</a>
+      <a class="btn btn-ghost" href="{{ '/photography/' | relative_url }}">See the photographs</a>
     </div>
-    <!--/ #section-topbar -->
+  </div>
+  <a class="hero-scroll" href="#about" aria-label="Scroll to about">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+  </a>
+</section>
 
-    <div id="headerwrap">
-        <div class="container">
-            <div class="row centered">
-                <div class="col-lg-12-img">
-                    <h1>Akhil Thomas</h1>
-                    <h3>Senior Cloud Consultant-Azure | akhilthomas011@gmail.com</h3>
-                </div>
-                <!--/.col-lg-12 -->
-            </div>
-            <!--/.row -->
-        </div>
-        <!--/.container -->
+<section id="about" class="section">
+  <div class="wrap split">
+    <div class="split-label"><p class="eyebrow"><span>01</span> About</p></div>
+    <div class="split-body about">
+      <div class="about-text">
+        <h2 class="display">Cloud consultant by profession, <em>photographer</em> by heart.</h2>
+        <p>I'm a cloud consultant with a strong track record in the information technology and services industry, focused on Microsoft Azure — from infrastructure and identity to automation and infrastructure as code.</p>
+        <p>I hold the Microsoft Certified Solutions Associate (MCSA) and Microsoft Certified Professional (MCP) certifications and a B.Tech in Computer Science. I'm always looking for ways to eliminate repetitive work and speed up delivery through automation.</p>
+        <p>Away from the terminal, I'm out with a camera — mountains, mist and whatever the light is doing.</p>
+        <p class="about-actions">
+          {% if site.author.resume %}<a class="btn" href="{{ site.author.resume }}" target="_blank" rel="noopener">Download résumé ↗</a>{% endif %}
+          <a class="link" href="#contact">Get in touch</a>
+        </p>
+      </div>
+      <figure class="about-photo">
+        <img src="{{ '/assets/img/portrait.jpg' | relative_url }}" alt="Portrait of {{ site.author.name }}" loading="lazy" width="600" height="720">
+      </figure>
     </div>
-    <!--/.#headerwrap -->
+  </div>
+</section>
 
-
-    <section id="about" name="about"></section>
-    <div id="intro">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-2 col-lg-offset-1">
-                    <h5>ABOUT</h5>
-                </div>
-                <div class="col-lg-6">
-                    <p>Cloud Consultant with a demonstrated history of working in the information technology and services industry- Microsoft Certified Solutions Associate(MCSA), Microsoft Certified Professional (MCP) and Bachelor of Technology (B.Tech.)
-                        focused in Computer Science </p>
-                </div>
-                <div class="col-lg-3">
-                    <p><a href="https://drive.google.com/file/d/1xMF7pXSdQKw5GOYkahHDuO81p75HuhfM/view"><i class="icon-file"></i></a>
-                        <sm>DOWNLOAD PDF</sm>
-                    </p>
-                </div>
-
-            </div>
-            <!--/.row -->
-        </div>
-        <!--/.container -->
+<section id="experience" class="section">
+  <div class="wrap split">
+    <div class="split-label"><p class="eyebrow"><span>02</span> Experience</p></div>
+    <div class="split-body">
+      <ol class="timeline">
+        {% for job in site.data.experience %}
+        <li class="job">
+          <p class="job-when">{{ job.start }} — {{ job.end }}</p>
+          <div class="job-body">
+            <h3 class="job-role">{{ job.role }}</h3>
+            <p class="job-company">{{ job.company }}</p>
+            {% if job.summary %}<p class="job-summary">{{ job.summary }}</p>{% endif %}
+            {% if job.highlights %}
+            <ul class="job-points">
+              {% for h in job.highlights %}<li>{{ h }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
     </div>
-    <!--/ #intro -->
+  </div>
+</section>
 
-
-    <section id="resume" name="resume"></section>
-    <!--EDUCATION DESCRIPTION -->
-    <div class="container desc">
-        <div class="row">
-
-            <div class="col-lg-2 col-lg-offset-1">
-                <h5>EDUCATION</h5>
-            </div>
-            <div class="col-lg-6">
-                <p>
-                    <t>Bachelor of Technology (B.Tech.)</t><br/> College of Engineering, Chengannur <br/>
-                    <i>4 Years Course</i>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>AUGUST 2012- APRIL 2016</sm><br/>
-                    <!--<imp>
-                        <sm>IN PROGRESS</sm>
-                	</imp>
-				 -->
-                </p>
-            </div>
-
-            <div class="col-lg-6 col-lg-offset-3">
-                <p>
-                    <t>Higher Secondary Education</t><br/> St. Mary's HSS, MUrickassery' <br/>
-                    <i>2 Years Course</i>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>JUNE 2009- MAY 2011</sm>
-                </p>
-            </div>
-
+<section id="skills" class="section">
+  <div class="wrap split">
+    <div class="split-label"><p class="eyebrow"><span>03</span> Skills</p></div>
+    <div class="split-body">
+      <div class="skills">
+        {% for s in site.data.skills %}
+        <div class="skill-group">
+          <h3 class="skill-title">{{ s.group }}</h3>
+          <ul class="tags">
+            {% for item in s.items %}<li>{{ item }}</li>{% endfor %}
+          </ul>
         </div>
-        <!--/.row -->
-        <br>
-        <hr>
+        {% endfor %}
+      </div>
+
+      <div class="creds">
+        {% assign c = site.data.credentials %}
+        {% if c.certifications %}
+        <div class="cred">
+          <h3 class="skill-title">Certifications</h3>
+          <ul>{% for x in c.certifications %}<li><strong>{{ x.title }}</strong><span>{{ x.place }}{% if x.when %} · {{ x.when }}{% endif %}</span></li>{% endfor %}</ul>
+        </div>
+        {% endif %}
+        {% if c.education %}
+        <div class="cred">
+          <h3 class="skill-title">Education</h3>
+          <ul>{% for x in c.education %}<li><strong>{{ x.title }}</strong><span>{{ x.place }}{% if x.when %} · {{ x.when }}{% endif %}</span></li>{% endfor %}</ul>
+        </div>
+        {% endif %}
+        {% if c.awards %}
+        <div class="cred">
+          <h3 class="skill-title">Awards</h3>
+          <ul>{% for x in c.awards %}<li><strong>{{ x.title }}</strong><span>{{ x.place }}{% if x.when %} · {{ x.when }}{% endif %}</span></li>{% endfor %}</ul>
+        </div>
+        {% endif %}
+      </div>
     </div>
-    <!--/.container -->
+  </div>
+</section>
 
-
-    <!--WORK DESCRIPTION -->
-    <section id="work" name="work"></section>
-    <div class="container desc">
-        <div class="row">
-
-            <div class="col-lg-2 col-lg-offset-1">
-                <h5>WORK</h5>
-            </div>
-            <div class="col-lg-6">
-                <p>
-                    <t>Cloud Consultant- Azure</t><br/> Spektra Systems LLC. <br/>
-                </p>
-                <p>
-                    <more>Designed, developed and deployed complex solutions on Microsoft Azure IaaS and PaaS. Working experience in configuring and managing RBAC, Virtual Machines, Virtual Networks, Storage Accounts, Vnet Gateways, Local gateways, IPs, Disks, NSGs, Load balancers, Traffic managers, Application Gateways, Key vaults, Azure PaaS solutions including App Services, Application Insights, Azure Monitor Alerts, Log analytics, Databases, Media Services, Automation accounts, Recovery Vault, Logic Apps, Function Apps, Azure Active Directory Domain Services (AADDS),WVD, Update Management, Intune etc. </more>
-		   <br/> <br/><more>Hands-on experience in Azure Active Directory, Windows Active Directory, DaaS (Desktop as a Services), Hyper-V,VPN, infrastructure operations involving ADDS, DNS, DHCP, ADFS, WAP, PKI, FTP, DFS, WSUS, file servers, Azure Site Recovery, SSL certificates, backup solutions like Veeam, Altaro, Cloudberry and Windows modern backup.<br/>
--Deep expertise in developing automated solutions for building large scale solution in minutes with power of Infrastructure as a code. Always look for a way to eliminate repeating tasks and fasten up delivery with the power of Windows PowerShell scripts, DSC and Azure Automation and API’s. </more>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>JUNE 2016 - CURRENT</sm>
-                </p>
-            </div>
-
-            <div class="col-lg-6 col-lg-offset-3">
-                <p>
-                    <t>Devops - Intern</t><br/> Tata Consultancy Services <br/>
-                </p>
-                <p>
-                    <more>Devops with Assurance, involving Continuous Integration, Delivery & Deployment using both physical and virtual Linux OS and Windows OS environment and tools such as Jenkins , Maven as build tool , JFrog Artifafactory ,sonarqube , puppet
-                        for configuration management , selenium for automated testing, jmeter , cobertura etc</more>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>FEBRUARY 2016 - MARCH 2016</sm>
-                </p>
-            </div>
-        </div>
-        <!--/.row -->
-        <br>
-        <hr>
+<section id="photography" class="section section-photos">
+  <div class="wrap section-head">
+    <div>
+      <p class="eyebrow"><span>04</span> Photography</p>
+      <h2 class="display">Recent <em>frames</em>.</h2>
     </div>
-    <!--/.container -->
+    <a class="btn" href="{{ '/photography/' | relative_url }}">View the full gallery →</a>
+  </div>
+  <div class="gallery-wrap">
+    {% include photo-grid.html limit=site.photos_on_home %}
+  </div>
+</section>
 
-
-    <!--AWARDS DESCRIPTION -->
-    <div class="container desc">
-        <div class="row">
-            <div class="col-lg-2 col-lg-offset-1">
-                <h5>AWARDS</h5>
-            </div>
-            <div class="col-lg-6">
-                <p>
-                    <t>Testimony - Runner up</t><br/> Tata Consultancy Services <br/>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>NOVEMBER 2015</sm>
-                </p>
-            </div>
-            <!--
-            <div class="col-lg-6 col-lg-offset-3">
-                <p>
-                    <t>Designer of the Year</t><br/> Awwwards Site
-                </p>
-                <p>
-                    <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book.</more>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>2013</sm>
-                </p>
-            </div>
-            --><br><br><br><br><br><br>
-        </div>
-        <!--/.row -->
+<section id="contact" class="section section-contact">
+  <div class="wrap split">
+    <div class="split-label"><p class="eyebrow"><span>05</span> Contact</p></div>
+    <div class="split-body">
+      <h2 class="display">Let's build something — or go <em>shoot</em> somewhere.</h2>
+      <a class="contact-mail" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+      <ul class="contact-links">
+        {% for s in site.social %}<li><a href="{{ s.url }}" target="_blank" rel="noopener me">{{ s.label }} ↗</a></li>{% endfor %}
+        <li><span>{{ site.author.location }}</span></li>
+      </ul>
     </div>
-    <!--/.container -->
-
-
-    <!--SKILLS DESCRIPTION -->
-    <div id="skillswrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-lg-offset-1">
-                    <h5>SKILLS</h5>
-                </div>
-                <div class="col-lg-3 centered">
-                    <canvas id="javascript" height="130" width="130"></canvas>
-                    <p>Azure</p>
-                    <br>
-                    <script>
-                        var doughnutData = [{
-                            value: 80,
-                            color: "#1abc9c"
-                        }, {
-                            value: 20,
-                            color: "#ecf0f1"
-                        }];
-                        var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
-                    </script>
-                </div>
-                <div class="col-lg-3 centered">
-                    <canvas id="bootstrap" height="130" width="130"></canvas>
-                    <p>Powershell</p>
-                    <br>
-                    <script>
-                        var doughnutData = [{
-                            value: 95,
-                            color: "#1abc9c"
-                        }, {
-                            value: 5,
-                            color: "#ecf0f1"
-                        }];
-                        var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
-                    </script>
-                </div>
-                <div class="col-lg-3 centered">
-                    <canvas id="wordpress" height="130" width="130"></canvas>
-                    <p>ARM Templates</p>
-                    <br>
-                    <script>
-                        var doughnutData = [{
-                            value: 95,
-                            color: "#1abc9c"
-                        }, {
-                            value: 5,
-                            color: "#ecf0f1"
-                        }];
-                        var myDoughnut = new Chart(document.getElementById("wordpress").getContext("2d")).Doughnut(doughnutData);
-                    </script>
-                </div>
-
-                <div class="col-lg-3 col-lg-offset-3 centered">
-                    <canvas id="html" height="130" width="130"></canvas>
-                    <p>Windows Client OS Administration</p>
-                    <br>
-                    <script>
-                        var doughnutData = [{
-                            value: 90,
-                            color: "#1abc9c"
-                        }, {
-                            value: 10,
-                            color: "#ecf0f1"
-                        }];
-                        var myDoughnut = new Chart(document.getElementById("html").getContext("2d")).Doughnut(doughnutData);
-                    </script>
-                </div>
-                <div class="col-lg-3 centered">
-                    <canvas id="photoshop" height="130" width="130"></canvas>
-                    <p>Windows Server Administraton</p>
-                    <br>
-                    <script>
-                        var doughnutData = [{
-                            value: 80,
-                            color: "#1abc9c"
-                        }, {
-                            value: 20,
-                            color: "#ecf0f1"
-                        }];
-                        var myDoughnut = new Chart(document.getElementById("photoshop").getContext("2d")).Doughnut(doughnutData);
-                    </script>
-                </div>
-            	<div class="col-lg-3 centered">
-                    <canvas id="illustrator" height="130" width="130"></canvas>
-                    <p>Virtual Desktop Infrastructure</p>
-                    <br>
-                    <script>
-                        var doughnutData = [{
-                            value: 90,
-                            color: "#1abc9c"
-                        }, {
-                            value: 10,
-                            color: "#ecf0f1"
-                        }];
-                        var myDoughnut = new Chart(document.getElementById("illustrator").getContext("2d")).Doughnut(doughnutData);
-                    </script>
-                </div>
-		<!--<div class="col-lg-3 centered">
-                    <canvas id="illustrator" height="130" width="130"></canvas>
-                    <p>Microsoft 365</p>
-                    <br>
-                    <script>
-                        var doughnutData = [{
-                            value: 60,
-                            color: "#1abc9c"
-                        }, {
-                            value: 40,
-                            color: "#ecf0f1"
-                        }];
-                        var myDoughnut = new Chart(document.getElementById("illustrator").getContext("2d")).Doughnut(doughnutData);
-                    </script>
-                </div>-->
-
-            </div>
-            <!--/.row -->
-            <br>
-        </div>
-        <!--/.container -->
-    </div>
-    <!--/ #skillswrap -->
-
-
-
-    <section id="work" name="work"></section>
-    <!--PORTFOLIO DESCRIPTION -->
-    <!--  <div class="container desc">
-        <div class="row">
-            <div class="col-lg-2 col-lg-offset-1">
-                <h5>PORTFOLIO</h5>
-            </div>
-            <div class="col-lg-6">
-                <p><img class="img-responsive" src="assets/img/port01.jpg" alt=""></p>
-            </div>
-            <div class="col-lg-3">
-                <p>CANALS OF ENGLAND</p>
-                <p>
-                    <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book.<br/><br/>
-                        <sm><i class="icon-tag"></i> design</sm>
-                    </more>
-                </p>
-            </div>
-
-            <div class="col-lg-6 col-lg-offset-3">
-                <p><img class="img-responsive" src="assets/img/port02.jpg" alt=""></p>
-            </div>
-            <div class="col-lg-3">
-                <p>SANKEY</p>
-                <p>
-                    <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book.<br/><br/>
-                        <sm><i class="icon-tag"></i> front-end</sm>
-                    </more>
-                </p>
-            </div>
-
-            <div class="col-lg-6 col-lg-offset-3">
-                <p><img class="img-responsive" src="assets/img/port03.jpg" alt=""></p>
-            </div>
-            <div class="col-lg-3">
-                <p>WE GROW</p>
-                <p>
-                    <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book.<br/><br/>
-                        <sm><i class="icon-tag"></i> web design</sm>
-                    </more>
-                </p>
-            </div>
-
-        </div>
-        -->
-    <!--/.row -->
-    <!--   <br>
-    <br>
-    </div> -->
-    <!--/.container -->
-
-
-    <section id="contact" name="contact"></section>
-    <!--FOOTER DESCRIPTION -->
-    <div id="footwrap">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-2 col-lg-offset-1">
-                    <h5>CONTACT</h5>
-                </div>
-                <div class="col-lg-6">
-                    <p>
-                        <t>Email</t><br/> akhilthomas011@gmail.com<br/> akhil.thomas@spektrasystems.com <br/>
-                    </p>
-                    <p>
-                        <t>Address</t><br/> M9, LIC Colony, Jeevan Bhima Nagar<br/> Postal 560075 <br/> Bengaluru, Karnataka, India <br/>
-                    </p>
-                    <p>
-                        <t>Phone</t><br/> +91 9567173773<br/>
-                    </p>
-                </div>
-                <div class="col-lg-3">
-                    <p>
-                        <sm>SOCIAL LINKS</sm>
-                    </p>
-                    <p>
-                        <!--<a href="#"><i class="icon-dribbble"></i></a> 
-                        <a href="#"><i class="icon-twitter"></i></a>
-                        <a href="#"><i class="icon-apple"></i></a>-->
-                        <a href="https://www.facebook.com/akhilthomas011"><i class="icon-facebook"></i></a>
-                        <a href="https://www.linkedin.com/in/akhilthomas011/"><i class="icon-linkedin"></i></a>
-
-                    </p>
-                </div>
-            </div>
-            <!--/.row -->
-        </div>
-        <!--/.container -->
-    </div>
-    <!--/ #footer -->
-
-    <div id="c">
-        <div class="container">
-            <p>© 2019 All rights reserved.
-            </p>
-
-        </div>
-    </div>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/bootstrap.js"></script>
-</body>
-
-</html>
+  </div>
+</section>

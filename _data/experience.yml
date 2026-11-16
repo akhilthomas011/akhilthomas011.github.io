@@ -1,0 +1,41 @@
+# Work experience, newest first. Add a new block at the top when you change roles.
+- role: Senior Cloud Consultant — Azure
+  company: Spektra Systems LLC
+  start: Jun 2016
+  end: Present
+  summary: >-
+    Designing, building and deploying complex solutions on Microsoft Azure
+    across IaaS and PaaS.
+  highlights:
+    - >-
+      Azure infrastructure end to end — RBAC, virtual machines, virtual networks,
+      VPN gateways, NSGs, load balancers, Traffic Manager, Application Gateway,
+      Key Vault and Recovery Services.
+    - >-
+      PaaS and operations — App Services, Application Insights, Azure Monitor,
+      Log Analytics, databases, Media Services, Logic Apps, Function Apps and
+      Update Management.
+    - >-
+      Identity and desktop — Azure Active Directory, Windows Active Directory,
+      Azure AD Domain Services, Windows Virtual Desktop, Desktop as a Service
+      and Intune.
+    - >-
+      Infrastructure as code — automated solutions that stand up large-scale
+      environments in minutes using PowerShell, DSC, Azure Automation and APIs.
+    - >-
+      Windows infrastructure operations — Hyper-V, VPN, AD DS, DNS, DHCP, ADFS,
+      WAP, PKI, DFS, WSUS, Azure Site Recovery and backup with Veeam, Altaro
+      and CloudBerry.
+
+- role: DevOps Intern
+  company: Tata Consultancy Services
+  start: Feb 2016
+  end: Mar 2016
+  summary: >-
+    DevOps with Assurance — continuous integration, delivery and deployment
+    across physical and virtual Linux and Windows environments.
+  highlights:
+    - >-
+      Jenkins and Maven builds, JFrog Artifactory, SonarQube, Puppet for
+      configuration management, Selenium for automated testing, JMeter and
+      Cobertura.

@@ -1,0 +1,17 @@
+# OPTIONAL captions for photos.
+#
+# You don't need to list a photo here for it to appear — every image inside
+# the /photos folder shows up automatically. Add an entry only when you want
+# a nicer title or a location under the photo.
+#
+# The key is the exact file name (including extension).
+#
+# example-file-name.jpg:
+#   title: Sunrise over the backwaters
+#   location: Alleppey, Kerala
+
+above-the-clouds.jpg:
+  title: Above the clouds
+
+lakeside-mist.jpg:
+  title: Lakeside mist

@@ -1,0 +1,38 @@
+---
+layout: default
+title: Photography
+description: A growing collection of photographs by Akhil Thomas.
+permalink: /photography/
+body_class: plain
+---
+{%- comment -%} Build the list of albums from the sub-folders of /photos {%- endcomment -%}
+{%- assign album_str = "" -%}
+{%- for f in site.static_files -%}
+  {%- assign head = f.path | slice: 0, 8 -%}
+  {%- if head == "/photos/" -%}
+    {%- assign parts = f.path | split: "/" -%}
+    {%- if parts.size > 3 -%}{%- assign album_str = album_str | append: parts[2] | append: "|" -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign albums = album_str | split: "|" | uniq | sort -%}
+
+<section class="section page-head">
+  <div class="wrap">
+    <p class="eyebrow">Photography</p>
+    <h1 class="page-title">Light, places &amp; <em>quiet moments</em>.</h1>
+    <p class="lede">When I'm not architecting cloud platforms I'm usually somewhere with a camera. A growing collection of frames I like.</p>
+
+    {% if albums.size > 1 %}
+    <div class="filters" role="group" aria-label="Filter photos by album" data-filters>
+      <button type="button" class="chip is-active" data-filter="*" aria-pressed="true">All</button>
+      {%- for a in albums %}
+      <button type="button" class="chip" data-filter="{{ a | escape }}" aria-pressed="false">{{ a | replace: "-", " " | replace: "_", " " | capitalize }}</button>
+      {%- endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="gallery-wrap">
+  {% include photo-grid.html %}
+</section>

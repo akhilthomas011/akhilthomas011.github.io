@@ -1,0 +1,44 @@
+# Skill groups shown on the home page. Add, remove or reorder freely.
+- group: Azure platform
+  items:
+    - Virtual Machines
+    - Virtual Networks
+    - VPN Gateways
+    - Load Balancers
+    - Application Gateway
+    - Traffic Manager
+    - Key Vault
+    - App Services
+    - Azure Monitor
+    - Log Analytics
+    - Logic Apps
+    - Function Apps
+    - Site Recovery
+
+- group: Automation & IaC
+  items:
+    - PowerShell
+    - ARM Templates
+    - DSC
+    - Azure Automation
+    - REST APIs
+
+- group: Identity & virtual desktop
+  items:
+    - Azure Active Directory
+    - Active Directory DS
+    - Azure AD Domain Services
+    - ADFS
+    - Windows Virtual Desktop
+    - Intune
+
+- group: Windows infrastructure
+  items:
+    - Windows Server
+    - Windows Client
+    - Hyper-V
+    - DNS & DHCP
+    - PKI
+    - WSUS
+    - DFS
+    - Veeam
