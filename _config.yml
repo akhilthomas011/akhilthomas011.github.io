@@ -1,1 +1,41 @@
-theme: jekyll-theme-architect
+# ---------------------------------------------------------------
+# Site settings — edit these and the whole site updates.
+# ---------------------------------------------------------------
+title: Akhil Thomas
+tagline: Cloud Consultant & Photographer
+description: >-
+  Akhil Thomas — Senior Cloud Consultant specialising in Microsoft Azure,
+  and a photography enthusiast.
+url: https://akhilthomas.in
+lang: en
+
+author:
+  name: Akhil Thomas
+  role: Senior Cloud Consultant — Azure
+  location: Bengaluru, India
+  email: akhilthomas011@gmail.com
+  resume: https://drive.google.com/file/d/1xMF7pXSdQKw5GOYkahHDuO81p75HuhfM/view
+
+# Social links shown in the Contact section. Remove a line to hide it,
+# or add more (label + url).
+social:
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/akhilthomas011/
+  - label: Facebook
+    url: https://www.facebook.com/akhilthomas011
+
+# Photography
+photos_on_home: 6          # how many recent photos to preview on the home page
+
+# ---------------------------------------------------------------
+# Build settings — you normally don't need to touch these.
+# ---------------------------------------------------------------
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+image: /assets/img/hero.jpg
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

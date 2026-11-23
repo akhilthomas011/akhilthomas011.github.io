@@ -1,0 +1,42 @@
+{%- comment -%}
+  Renders every image found under /photos. Files whose name starts with a
+  date (2026-11-...) come first, newest first; the rest follow.
+  Usage: {% include photo-grid.html limit=6 %}   — limit is optional.
+  The album is the sub-folder name: /photos/<album>/<file>.
+{%- endcomment -%}
+{%- assign exts = ".jpg,.jpeg,.png,.webp,.avif,.gif" | split: "," -%}
+{%- assign files = site.static_files | sort: "name" | reverse -%}
+{%- assign shown = 0 -%}
+<div class="grid" data-gallery>
+{%- assign passes = "dated,undated" | split: "," -%}
+{%- for pass in passes -%}
+{%- for f in files -%}
+  {%- assign c = f.name | slice: 0 -%}
+  {%- assign kind = "undated" -%}
+  {%- if "0123456789" contains c -%}{%- assign kind = "dated" -%}{%- endif -%}
+  {%- if kind != pass -%}{%- continue -%}{%- endif -%}
+  {%- assign head = f.path | slice: 0, 8 -%}
+  {%- assign ext = f.extname | downcase -%}
+  {%- if head != "/photos/" -%}{%- continue -%}{%- endif -%}
+  {%- unless exts contains ext -%}{%- continue -%}{%- endunless -%}
+  {%- if include.limit and shown >= include.limit -%}{%- break -%}{%- endif -%}
+  {%- assign shown = shown | plus: 1 -%}
+  {%- assign parts = f.path | split: "/" -%}
+  {%- assign album = "" -%}
+  {%- if parts.size > 3 -%}{%- assign album = parts[2] -%}{%- endif -%}
+  {%- assign meta = site.data.photos[f.name] -%}
+  {%- assign fallback = f.basename | replace: "-", " " | replace: "_", " " -%}
+  <a class="shot" href="{{ f.path | relative_url }}"
+     data-album="{{ album | escape }}"
+     data-name="{{ f.basename | escape }}"
+     {%- if meta.title %} data-title="{{ meta.title | escape }}"{% endif -%}
+     {%- if meta.location %} data-location="{{ meta.location | escape }}"{% endif -%}>
+    <img src="{{ f.path | relative_url }}" alt="{{ meta.title | default: fallback | escape }}" loading="lazy" decoding="async">
+    <span class="shot-cap"></span>
+  </a>
+{%- endfor -%}
+{%- endfor -%}
+</div>
+{%- if shown == 0 -%}
+<p class="empty">No photos yet — drop some images into the <code>photos/</code> folder and they'll appear here.</p>
+{%- endif -%}
